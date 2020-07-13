@@ -1,0 +1,14 @@
+plugins {
+	id 'java-library'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+//mainClassName = 'org.frc1073.toolbox.gui.Gui'
+
+repositories {
+}
+
+dependencies {
+}
