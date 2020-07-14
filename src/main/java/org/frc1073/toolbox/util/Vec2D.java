@@ -77,5 +77,4 @@ public class Vec2D {
         return Math.atan2(y, x);
     }
 
-
 }
