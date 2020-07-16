@@ -1,7 +1,11 @@
+package org.frc1073.toolbox.navtool;
+
 import javax.swing.*;
 import java.awt.*;
 
-class Gui {
+import org.frc1073.toolbox.util.Vec2D;
+
+class Main {
 
 
     public static class Painter extends JPanel {

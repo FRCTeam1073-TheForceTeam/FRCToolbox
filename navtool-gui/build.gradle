@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'org.frc1073.toolbox.navtool.Main'
+
+
+dependencies {
+    implementation project(':localization')
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.13'
+}

@@ -8,3 +8,8 @@
  */
 
 rootProject.name = 'FRCToolbox'
+
+
+include 'util'
+include 'localization'
+include 'navtool-gui'
