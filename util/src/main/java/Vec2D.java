@@ -44,6 +44,11 @@ public class Vec2D {
         y = -y;
     }
 
+    public void scale(double s) {
+        x *= s;
+        y *= s;
+    }
+
     public void add(Vec2D a, Vec2D b) {
         x = a.x + b.x;
         y = a.y + b.y;
