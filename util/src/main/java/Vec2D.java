@@ -1,6 +1,5 @@
 package org.frc1073.toolbox.util;
 
-
 /**
  * Vector 2D class represents points and vectors in the plane.
  */
@@ -20,6 +19,11 @@ public class Vec2D {
     }
 
     public Vec2D(Vec2D b) {
+        this.x = b.x;
+        this.y = b.y;
+    }
+
+    public void assign(Vec2D b) {
         this.x = b.x;
         this.y = b.y;
     }
@@ -80,6 +84,13 @@ public class Vec2D {
 
     public double getAngle() {
         return Math.atan2(y, x);
+    }
+
+    public void rotate(double angle) {
+        double xp = x * Math.cos(angle) - y * Math.sin(angle);
+        double yp = y * Math.cos(angle) + x * Math.sin(angle);
+        x = xp;
+        y = yp;
     }
 
 }

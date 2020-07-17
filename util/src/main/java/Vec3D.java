@@ -28,10 +28,11 @@ public class Vec3D {
         this.z = b.z;
     }
 
-    public void makeDirectionVector(double angle) {
-        x = Math.cos(angle);
-        y = Math.sin(angle);
-        //z = Math.tan(angle); ???
+    public void makeDirectionVector(double azimuth, double elevation) {
+       // Unit vector formula for azimuth & elevation
+       x = Math.cos(elevation) * Math.cos(azimuth);
+       y = Math.cos(elevation) * Math.sin(azimuth);
+       z = Math.sin(elevation);
     }
 
     public void accumulate(Vec3D b) {
@@ -91,8 +92,14 @@ public class Vec3D {
         }
     }
 
-    public double getAngle() {
+    public double getAzimuth() {
         return Math.atan2(y, x);
+    }
+
+    public double getElevation() {
+        // Elevation angle equation.
+        double len2 = Math.sqrt(x*x + y*y);
+        return Math.atan2(z,len2);
     }
 
 }
